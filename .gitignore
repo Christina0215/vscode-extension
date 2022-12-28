@@ -1,0 +1,4 @@
+node_modules/
+out/
+.vscode/
+big-0.0.1.vsix
