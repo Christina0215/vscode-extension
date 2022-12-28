@@ -7,14 +7,14 @@ export function activate(context: vscode.ExtensionContext) {
       activeTextEditor
     } = vscode.window
     vscode.window.showInputBox(
-      { // 这个对象中所有参数都是可选参数
-        password: false, // 输入内容是否是密码
-        ignoreFocusOut: true, // 默认false，设置为true时鼠标点击别的地方输入框不会消失
-        placeHolder: '输入希望注释的文字', // 在输入框内的提示信息
-        prompt: '默认大小为32*32', // 在输入框下方的提示信息
+      {
+        password: false, 
+        ignoreFocusOut: true, 
+        placeHolder: 'Enter the text you want to comment', 
+        prompt: 'The default size is 32*32', 
         validateInput: function (text) {
           if (text.length == 0) {
-            return '请输入'
+            return 'please enter'
           }
         }
       }).then((inputStr) => new Promise((resolve, reject) => {
@@ -23,7 +23,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
         const panel = vscode.window.createWebviewPanel(
           'webview',
-          "测试webview",
+          "webview",
           vscode.ViewColumn.One,
           options
         );

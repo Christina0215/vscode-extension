@@ -1,6 +1,11 @@
 {
   "name": "big",
 	"displayName": "big",
+  "publisher": "Christina",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Christina0215/vscode-extension/"
+  },
 	"description": "big",
 	"version": "0.0.1",
 	"engines": {
