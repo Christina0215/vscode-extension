@@ -18,6 +18,7 @@
     "onCommand:big.bigger"
   ],
   "main": "./out/extension.js",
+  "icon": "viagra.jpeg",
   "contributes": {
     "commands": [
       {
