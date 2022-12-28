@@ -7,7 +7,7 @@
     "url": "https://github.com/Christina0215/vscode-extension/"
   },
   "description": "帮你写出更大的注释/Easily create multi-line note in any language",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.73.0"
   },
