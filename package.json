@@ -1,12 +1,12 @@
 {
   "name": "big",
-  "displayName": "big",
+  "displayName": "Big Note",
   "publisher": "Christina",
   "repository": {
     "type": "git",
     "url": "https://github.com/Christina0215/vscode-extension/"
   },
-  "description": "big",
+  "description": "帮你写出更大的注释/Easily create multi-line note in any language",
   "version": "0.0.3",
   "engines": {
     "vscode": "^1.73.0"
