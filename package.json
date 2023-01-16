@@ -25,7 +25,27 @@
         "command": "big.bigger",
         "title": "Bigger"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Big",
+      "properties": {
+        "Big.font": {
+          "type": "string",
+          "default": "SimSun",
+          "description": "font used for output,see:https://developer.mozilla.org/en-US/docs/Web/CSS/font#examples"
+        },
+        "Big.size": {
+          "type": "integer",
+          "default": 32,
+          "description": "font size used for output"
+        },
+        "Big.character": {
+          "type": "string",
+          "default": "#",
+          "description": "character used for output"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",

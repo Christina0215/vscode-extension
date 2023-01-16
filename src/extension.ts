@@ -27,7 +27,14 @@ export function activate(context: vscode.ExtensionContext) {
           vscode.ViewColumn.One,
           options
         );
-        panel.webview.html = html
+        const size = vscode.workspace.getConfiguration().get('Big.size');
+        const character:string|undefined = vscode.workspace.getConfiguration().get('Big.character')
+        const char = character as string + character;
+        const font = 'px '+vscode.workspace.getConfiguration().get('Big.font');
+        const input = `var cols = ${size};var	rows = ${size};var font = '${font}';var char = '${char}'`
+        const modal = html.replace('$[input]$',input)
+        console.log(modal)
+        panel.webview.html = modal
         panel.webview.postMessage({ inputStr: inputStr });
         panel.webview.onDidReceiveMessage(message => {
           resolve(message)
