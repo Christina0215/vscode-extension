@@ -4,10 +4,11 @@
 ## 如何使用
 将光标放置于期望插入注释的位置，默认快捷键 `cmd + ctrl + p.`调起输入框，搜索bigger命令，输入期望显示的文字即可。
 Place the cursor at the position where you want to insert the comment, and the default shortcut key `cmd + ctrl + p.` calls up the input box, search for the bigger command, and enter the text you want to display.
+支持在配置中修改字体大小，填充字符，字体。
 ![Alt Text](https://github.com/Christina0215/vscode-extension/blob/master/example.gif)
 ## 输入语言支持
 原理是由canvas像素转换而来，理论上支持所有语言。
 The principle is converted from canvas pixels, and theoretically supports all languages.
 ## TODO
-- [ ] 自定义字符组成文字/make up text by customize symbol
-- [ ] 自定义大小/customize size
+- [x] 自定义字符组成文字/make up text by customize symbol
+- [x] 自定义大小/customize size
