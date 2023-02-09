@@ -44,7 +44,7 @@ export function activate(context: vscode.ExtensionContext) {
       .then((output:any) => {
         const change = new vscode.WorkspaceEdit()
         const uri = activeTextEditor?.document.uri
-        var position = new vscode.Position(activeTextEditor.selection.active.line, activeTextEditor.selection.active.character);
+        var position = new vscode.Position(activeTextEditor?.selection.active.line as number, activeTextEditor?.selection.active.character as number);
         uri && change.insert(uri,position,'\n')
         output.forEach((e: string) => {
           uri && change.insert(uri,position,'//' + e + '\n')
