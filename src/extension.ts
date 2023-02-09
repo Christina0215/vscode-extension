@@ -33,7 +33,6 @@ export function activate(context: vscode.ExtensionContext) {
         const font = 'px '+vscode.workspace.getConfiguration().get('Big.font');
         const input = `var cols = ${size};var	rows = ${size};var font = '${font}';var char = '${char}'`
         const modal = html.replace('$[input]$',input)
-        console.log(modal)
         panel.webview.html = modal
         panel.webview.postMessage({ inputStr: inputStr });
         panel.webview.onDidReceiveMessage(message => {
@@ -45,8 +44,9 @@ export function activate(context: vscode.ExtensionContext) {
       .then((output:any) => {
         const change = new vscode.WorkspaceEdit()
         const uri = activeTextEditor?.document.uri
-        activeTextEditor && output.forEach((e: string) => {
-          var position = new vscode.Position(activeTextEditor.selection.active.line, activeTextEditor.selection.active.character);
+        var position = new vscode.Position(activeTextEditor.selection.active.line, activeTextEditor.selection.active.character);
+        uri && change.insert(uri,position,'\n')
+        output.forEach((e: string) => {
           uri && change.insert(uri,position,'//' + e + '\n')
         })
         vscode.workspace.applyEdit(change)

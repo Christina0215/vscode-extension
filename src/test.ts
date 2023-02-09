@@ -17,7 +17,7 @@ const html:string =
     ctx.clearRect(0,0,cols,rows);
     ctx.font = rows+font;
     ctx.fillStyle = "#000";
-    ctx.fillText(message.inputStr, 0, parseInt(rows*3/4));
+    ctx.fillText(message.inputStr, 0, parseInt(rows*7/8));
     var data = ctx.getImageData(0, 0, cols, rows)
     const output = [];
     for(let i = 1; i <= rows; i++){
@@ -38,5 +38,6 @@ const html:string =
 </script>
 </body>
 </html>`
+                                                                                                                            
 
 export {html};
